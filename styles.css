@@ -1,0 +1,361 @@
+/* Global reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  /* Theobroma-style soft peach background */
+  background: #f9bdb6;
+  color: #333;
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Layout wrapper */
+.page {
+  /* Full-width on laptop and desktop */
+  width: 100%;
+  margin: 0;
+  padding-bottom: 80px; /* room for bottom buttons if any */
+}
+
+/* Header */
+.header {
+  /* Teal + peach gradient, like Theobroma brand */
+  background: linear-gradient(120deg, #007f7f, #f9bdb6);
+  padding: 16px 14px 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.header-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.header-tagline {
+  font-size: 0.9rem;
+  margin-top: 4px;
+  color: #fff7f5;
+}
+
+/* Back button */
+.back-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: #fff;
+  position: sticky;
+  top: 64px; /* header height approx */
+  z-index: 19;
+  border-bottom: 1px solid #f2d7e3;
+}
+
+.back-button {
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: none;
+  background: #ffd5df;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #4b2e2e;
+}
+
+.back-button:hover {
+  background: #ffc3d2;
+}
+
+.breadcrumb {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* Main navigation */
+.main-nav {
+  display: flex;
+  gap: 8px;
+  padding: 8px 14px 10px;
+  overflow-x: auto;
+  background: #ffffff;
+  border-bottom: 1px solid #f2d7e3;
+}
+
+.main-nav a {
+  flex-shrink: 0;
+  padding: 8px 14px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  background: #e0f0ee; /* soft teal tint */
+  color: #004b4b;
+  white-space: nowrap;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.main-nav a:hover {
+  background: #cbe4e1;
+  transform: translateY(-1px);
+}
+
+.main-nav a.active {
+  background: #007f7f;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Sections */
+.section {
+  padding: 16px 14px;
+}
+
+.section-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #3b2a24; /* chocolate/brown accent */
+}
+
+.section-subtitle {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+/* Small helper for notes under titles (used on cakes/custom pages) */
+.section-note {
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+  color: #4b2e2e;
+}
+
+/* Hero (home page) */
+.hero {
+  margin-top: 8px;
+  padding: 16px 14px 20px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.hero-title {
+  font-size: 1.4rem;
+  margin-bottom: 6px;
+  color: #3b2a24;
+}
+
+.hero-subtitle {
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.hero-tags {
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 14px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Buttons */
+.btn-primary,
+.btn-secondary {
+  padding: 9px 14px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-primary {
+  background: #007f7f; /* Theobroma-style teal */
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  filter: brightness(1.05);
+}
+
+.btn-secondary {
+  background: #ffd5df; /* soft pink/peach */
+  color: #4b2e2e;
+}
+
+.btn-secondary:hover {
+  background: #ffc3d2;
+}
+
+/* Category cards (home) */
+.category-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.category-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 10px 12px 12px;
+  box-shadow: 0 2px 7px rgba(0,0,0,0.06);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.category-card:hover {
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.category-thumb {
+  flex-shrink: 0;
+  width: 70px;
+  height: 70px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #ffe6ef;
+}
+
+.category-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.category-info h3 {
+  font-size: 1rem;
+  margin-bottom: 4px;
+  color: #3b2a24;
+}
+
+.category-info p {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* Product cards (lists) */
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-body {
+  padding: 10px 12px 12px;
+}
+
+.card-body h3 {
+  font-size: 1rem;
+  margin-bottom: 4px;
+  color: #3b2a24;
+}
+
+.card-body p {
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+}
+
+.price {
+  font-weight: 600;
+  color: #007f7f; /* teal accent */
+  font-size: 0.9rem;
+}
+
+/* Availability badges (use next to cake names) */
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  margin-left: 6px;
+}
+
+.badge-available {
+  background: #e1f7d5;
+  color: #2f7a1f;
+}
+
+.badge-unavailable {
+  background: #ffe0e0;
+  color: #b3261e;
+}
+
+/* Info list */
+.info-list {
+  list-style: disc;
+  padding-left: 18px;
+  font-size: 0.9rem;
+}
+
+.info-list li {
+  margin-bottom: 6px;
+}
+
+/* Footer */
+.footer {
+  margin-top: 16px;
+  padding: 16px 14px 26px;
+  background: #ffffff;
+  font-size: 0.9rem;
+  border-top: 2px solid #f3d0c8;
+}
+
+.footer a {
+  color: #007f7f;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-small {
+  font-size: 0.8rem;
+  margin-top: 8px;
+  color: #555;
+}
+
+/* Responsive */
+@media (min-width: 600px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

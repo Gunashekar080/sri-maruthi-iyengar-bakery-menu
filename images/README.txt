@@ -1,0 +1,25 @@
+Put your cake photos in this folder and rename them to match the HTML:
+- chocolate-truffle.jpg
+- red-velvet.jpg
+- black-forest.jpg
+- pineapple.jpg
+- butterscotch.jpg
+- fresh-fruit.jpg
+- strawberry.jpg
+- mango.jpg
+- blueberry.jpg
+- rasmalai.jpg
+- gulab-jamun.jpg
+- oreo.jpg
+- kitkat.jpg
+- ferrero-rocher.jpg
+- hazelnut.jpg
+- vanilla.jpg
+- caramel.jpg
+- mocha.jpg
+- tiramisu.jpg
+- marble.jpg
+- rainbow.jpg
+- pinata.jpg
+- cheesecake.jpg
+- brownie.jpg
